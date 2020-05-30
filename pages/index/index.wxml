@@ -1,0 +1,28 @@
+<view class="pdd_index">
+  <SearchInput></SearchInput>
+  <view class="index_swiper">
+    <swiper indicator-dots indicator-color="rgba(0,0,0,.3)" autoplay circular>
+      <swiper-item
+       wx:for="{{swiperList}}"
+       wx:key="id"
+      >
+        <navigator url="{{item.navigatorUrl}}">
+          <image mode="widthFix" src="{{item.imageSrc}}"  />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+  <view class="index_floor">
+    <view class="floor_group" wx:for="{{floorList}}"
+    wx:for-item="item1" wx:for-index="index1" wx:key="id">
+      <view class="floor_title">
+        <text>{{item1.name}}</text>
+      </view>
+      <view class="floor_list" wx:for="{{item1.list}}" wx:for-item="item2" wx:for-index="index2" wx:key="id">
+          <navigator url="{{item2.navigatorUrl}}">
+            <image mode="" src="{{item2.imageSrc}}" />
+          </navigator>
+      </view>
+    </view>
+  </view>
+</view>
