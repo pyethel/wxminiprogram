@@ -18,7 +18,7 @@ Page({
   //获取轮播图数据
   getSwiperList(){
     request({   // 封装request
-      url:"http://192.168.101.8:8080/index/swiper"
+      url:"http://localhost:8080/index/swiper"
     }).then(result=>{
       this.setData({
         swiperList : result.data
@@ -27,7 +27,7 @@ Page({
   },
   getFloorList(){
     request({
-      url:"http://192.168.101.8:8080/index/floor"
+      url:"http://localhost:8080/index/floor"
     }).then(result=>{
       this.setData({
         floorList : result.data

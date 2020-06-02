@@ -51,7 +51,7 @@ Page({
     // 创建订单
     const orderParams = {orderPrice, consigneeAddr, token};
     request({
-      url:"http://192.168.101.8:8080/pay/orderCreate",
+      url:"http://localhost:8080/pay/orderCreate",
       data: orderParams
     }).then(result=>{
       // 创建订单 返回订单号

@@ -32,7 +32,7 @@ Page({
   //获取商品列表数据
   getGoodsList(){
     request({
-      url:"http://192.168.101.8:8080/goods_list/getGoodsList",
+      url:"http://localhost:8080/goods_list/getGoodsList",
       data: this.QueryParams
     }).then(result=>{
       const total = result.data.total;
@@ -73,7 +73,5 @@ Page({
       this.QueryParams.pageNum++;
       this.getGoodsList();
     }
-
   },
-
 })

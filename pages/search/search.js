@@ -32,7 +32,7 @@ Page({
   // 查询请求函数
   qsearch(query){
     request({
-      url:"http://192.168.101.8:8080/search/query",
+      url:"http://localhost:8080/search/query",
       data:{query:query}
     }).then(res=>{
       this.setData({

@@ -1,3 +1,4 @@
-<button class="btn" type="primary" plain open-type="getUserInfo" bindgetuserinfo="handleGetUserInfo">
+<button class="btn" type="primary" plain open-type="getUserInfo" 
+bindgetuserinfo="handleGetUserInfo">
     获取授权
 </button>

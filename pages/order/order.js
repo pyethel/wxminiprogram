@@ -75,7 +75,7 @@ Page({
   // 获取订单列表方法
   getOrders(type, token){
     request({
-      url:"http://192.168.101.8:8080/order/getOrder",
+      url:"http://localhost:8080/order/getOrder",
       data: {
         type: type,
         token
