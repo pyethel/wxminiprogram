@@ -31,19 +31,19 @@ Page({
 
   // 提交订单
   handleOrderPay(){
+    // 判断缓存中是否有token
     const token = wx.getStorageSync("token");
+    // 如果没token 跳转到授权页面 获取token
     if(!token){
       wx.navigateTo({
         url:'/pages/auth/auth'
       });
       return;
     }
+    // 有token
     // 创建订单
     const orderPrice = this.data.totalPrice;
     const consigneeAddr = this.data.address.all;
-    const cart = this.data.cart;
-    
-    // 创建订单
     const orderParams = {orderPrice, consigneeAddr, token};
     request({
       url:"http://localhost:8080/pay/orderCreate",
