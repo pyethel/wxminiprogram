@@ -42,12 +42,7 @@ Page({
     const orderPrice = this.data.totalPrice;
     const consigneeAddr = this.data.address.all;
     const cart = this.data.cart;
-    let goods = [];
-    cart.forEach(v=>goods.push({
-      goodsId:v.id,
-      goodsNumber:v.num,
-      goodsPrice:v.price
-    }));
+    
     // 创建订单
     const orderParams = {orderPrice, consigneeAddr, token};
     request({
